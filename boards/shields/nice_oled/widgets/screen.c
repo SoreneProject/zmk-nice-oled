@@ -3,12 +3,10 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#include <zmk/battery.h>
 #include <zmk/ble.h>
 #include <zmk/display.h>
 #include <zmk/endpoints.h>
 #include <zmk/event_manager.h>
-#include <zmk/events/battery_state_changed.h>
 #include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/events/endpoint_changed.h>
 #include <zmk/events/layer_state_changed.h>
@@ -18,7 +16,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/usb.h>
 #include <zmk/wpm.h>
 
-#include "battery.h"
 #include "layer.h"
 #include "output.h"
 #include "profile.h"
@@ -63,7 +60,6 @@ static void draw_canvas(lv_obj_t *widget, lv_color_t cbuf[], const struct status
     // Draw widgets
     draw_background(canvas);
     draw_output_status(canvas, state);
-    draw_battery_status(canvas, state);
     draw_wpm_status(canvas, state);
     draw_profile_status(canvas, state);
     draw_layer_status(canvas, state);

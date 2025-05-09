@@ -3,20 +3,25 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#include <zmk/battery.h>
 #include <zmk/ble.h>
 #include <zmk/display.h>
+#include <zmk/endpoints.h>
 #include <zmk/event_manager.h>
-#include <zmk/events/battery_state_changed.h>
-#include <zmk/events/split_peripheral_status_changed.h>
+#include <zmk/events/ble_active_profile_changed.h>
+#include <zmk/events/endpoint_changed.h>
+#include <zmk/events/layer_state_changed.h>
 #include <zmk/events/usb_conn_state_changed.h>
-#include <zmk/split/bluetooth/peripheral.h>
+#include <zmk/events/wpm_state_changed.h>
+#include <zmk/keymap.h>
 #include <zmk/usb.h>
+#include <zmk/wpm.h>
 
 #include "animation.h"
-#include "battery.h"
+#include "layer.h"
 #include "output.h"
-#include "screen_peripheral.h"
+#include "profile.h"
+#include "screen.h"
+#include "wpm.h"
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
