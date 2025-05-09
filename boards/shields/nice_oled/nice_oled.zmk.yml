@@ -10,3 +10,7 @@ features:
 siblings:
   - nice_oled
   - nice_epaper
+
+include:
+  - nice_view_adapter
+  - nice_oled

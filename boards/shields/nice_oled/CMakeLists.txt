@@ -1,6 +1,3 @@
-if(CONFIG_NICE_EPAPER_ON)
-	add_subdirectory(nice_epaper)
-else()
 if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
   zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
   zephyr_library_sources(custom_status_screen.c)
@@ -15,7 +12,6 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
                 # 	target_target_sources_ifdef(CONFIG_NICE_OLED_WIDGET_LAYER_RGB app PRIVATE rgb/layer_rgb.c)
   	endif()
   endif()
-
 
   if(NOT CONFIG_ZMK_SPLIT OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
     if(CONFIG_NICE_OLED_WIDGET_LAYER_RGB)
@@ -33,7 +29,6 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
     zephyr_library_sources(widgets/screen.c)
     zephyr_library_sources(widgets/wpm.c)
   else()
-
     if(CONFIG_NICE_OLED_WIDGET_PERIPHERAL_TEST)
       zephyr_library_sources(assets/crystal.c)
     else()
@@ -47,4 +42,3 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
     zephyr_library_sources(widgets/screen_peripheral.c)
   endif()
 endif()
-endif() # SHIELD_NICE_EPAPER

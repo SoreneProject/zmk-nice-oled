@@ -109,78 +109,292 @@ endif # SHIELD_NICE_OLED
 endif # NICE_EPAPER_ON
 
 if SHIELD_NICE_OLED || SHIELD_NICE_EPAPER
-if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
-### NICE OLED WIDGET WPM
-config NICE_OLED_WIDGET_WPM
-    bool "Enable Nice OLED WPM Widget"
+config ZMK_DISPLAY
     default y
 
-if NICE_OLED_WIDGET_WPM
-
-config NICE_OLED_WIDGET_WPM_LUNA
-    bool "Enable wpm luna"
+config LV_FONT_MONTSERRAT_14
     default y
 
-if NICE_OLED_WIDGET_WPM_LUNA
-
-config NICE_OLED_WIDGET_WPM_LUNA_ANIMATION_MS
-    int "Luna Animation in ms for WPM Widget"
-    default 300
-
-endif # NICE_OLED_WIDGET_WPM_LUNA
-
-endif # NICE_OLED_WIDGET_WPM
-
-### NICE OLED WIDGET HID INDICATORS
-config NICE_OLED_WIDGET_HID_INDICATORS
-    bool "Enable HID indicators"
+config LV_FONT_MONTSERRAT_16
     default y
 
-if NICE_OLED_WIDGET_HID_INDICATORS
-
-config ZMK_HID_INDICATORS
-    bool "Enable HID indicators"
+config LV_FONT_MONTSERRAT_18
     default y
 
-config NICE_OLED_WIDGET_HID_INDICATORS_LUNA
-    bool "Enable HID indicators luna"
+config LV_FONT_MONTSERRAT_20
     default y
 
-config NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ONLY_CAPSLOCK
-    bool "Enable HID indicators luna only on CapsLock"
-    default n
-
-if NICE_OLED_WIDGET_HID_INDICATORS_LUNA
-
-config NICE_OLED_WIDGET_HID_INDICATORS_LUNA_ANIMATION_MS
-    int "Luna Animation in ms for HID Indicators"
-    default 300
-
-endif # NICE_OLED_WIDGET_HID_INDICATORS_LUNA
-
-endif # NICE_OLED_WIDGET_HID_INDICATORS
-
-### NICE OLED WIDGET MODIFIERS INDICATORS
-config NICE_OLED_WIDGET_MODIFIERS_INDICATORS
-    bool "Enable modifiers indicators"
+config LV_FONT_MONTSERRAT_22
     default y
 
-if NICE_OLED_WIDGET_MODIFIERS_INDICATORS
-
-config NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA
-    bool "Enable modifiers indicators luna"
+config LV_FONT_MONTSERRAT_24
     default y
 
-if NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA
+config LV_FONT_MONTSERRAT_26
+    default y
 
-config NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA_ANIMATION_MS
-    int "Luna Animation in ms for Modifiers Indicators"
-    default 300
+config LV_FONT_MONTSERRAT_28
+    default y
 
-endif # NICE_OLED_WIDGET_MODIFIERS_INDICATORS_LUNA
-endif # NICE_OLED_WIDGET_MODIFIERS_INDICATORS
-endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+config LV_FONT_MONTSERRAT_30
+    default y
+
+config LV_FONT_MONTSERRAT_32
+    default y
+
+config LV_FONT_MONTSERRAT_34
+    default y
+
+config LV_FONT_MONTSERRAT_36
+    default y
+
+config LV_FONT_MONTSERRAT_38
+    default y
+
+config LV_FONT_MONTSERRAT_40
+    default y
+
+config LV_FONT_MONTSERRAT_42
+    default y
+
+config LV_FONT_MONTSERRAT_44
+    default y
+
+config LV_FONT_MONTSERRAT_46
+    default y
+
+config LV_FONT_MONTSERRAT_48
+    default y
+
+config LV_FONT_MONTSERRAT_50
+    default y
+
+config LV_FONT_MONTSERRAT_52
+    default y
+
+config LV_FONT_MONTSERRAT_54
+    default y
+
+config LV_FONT_MONTSERRAT_56
+    default y
+
+config LV_FONT_MONTSERRAT_58
+    default y
+
+config LV_FONT_MONTSERRAT_60
+    default y
+
+config LV_FONT_MONTSERRAT_62
+    default y
+
+config LV_FONT_MONTSERRAT_64
+    default y
+
+config LV_FONT_MONTSERRAT_66
+    default y
+
+config LV_FONT_MONTSERRAT_68
+    default y
+
+config LV_FONT_MONTSERRAT_70
+    default y
+
+config LV_FONT_MONTSERRAT_72
+    default y
+
+config LV_FONT_MONTSERRAT_74
+    default y
+
+config LV_FONT_MONTSERRAT_76
+    default y
+
+config LV_FONT_MONTSERRAT_78
+    default y
+
+config LV_FONT_MONTSERRAT_80
+    default y
+
+config LV_FONT_MONTSERRAT_82
+    default y
+
+config LV_FONT_MONTSERRAT_84
+    default y
+
+config LV_FONT_MONTSERRAT_86
+    default y
+
+config LV_FONT_MONTSERRAT_88
+    default y
+
+config LV_FONT_MONTSERRAT_90
+    default y
+
+config LV_FONT_MONTSERRAT_92
+    default y
+
+config LV_FONT_MONTSERRAT_94
+    default y
+
+config LV_FONT_MONTSERRAT_96
+    default y
+
+config LV_FONT_MONTSERRAT_98
+    default y
+
+config LV_FONT_MONTSERRAT_100
+    default y
+
+config LV_FONT_MONTSERRAT_102
+    default y
+
+config LV_FONT_MONTSERRAT_104
+    default y
+
+config LV_FONT_MONTSERRAT_106
+    default y
+
+config LV_FONT_MONTSERRAT_108
+    default y
+
+config LV_FONT_MONTSERRAT_110
+    default y
+
+config LV_FONT_MONTSERRAT_112
+    default y
+
+config LV_FONT_MONTSERRAT_114
+    default y
+
+config LV_FONT_MONTSERRAT_116
+    default y
+
+config LV_FONT_MONTSERRAT_118
+    default y
+
+config LV_FONT_MONTSERRAT_120
+    default y
+
+config LV_FONT_MONTSERRAT_122
+    default y
+
+config LV_FONT_MONTSERRAT_124
+    default y
+
+config LV_FONT_MONTSERRAT_126
+    default y
+
+config LV_FONT_MONTSERRAT_128
+    default y
+
+config LV_FONT_MONTSERRAT_130
+    default y
+
+config LV_FONT_MONTSERRAT_132
+    default y
+
+config LV_FONT_MONTSERRAT_134
+    default y
+
+config LV_FONT_MONTSERRAT_136
+    default y
+
+config LV_FONT_MONTSERRAT_138
+    default y
+
+config LV_FONT_MONTSERRAT_140
+    default y
+
+config LV_FONT_MONTSERRAT_142
+    default y
+
+config LV_FONT_MONTSERRAT_144
+    default y
+
+config LV_FONT_MONTSERRAT_146
+    default y
+
+config LV_FONT_MONTSERRAT_148
+    default y
+
+config LV_FONT_MONTSERRAT_150
+    default y
+
+config LV_FONT_MONTSERRAT_152
+    default y
+
+config LV_FONT_MONTSERRAT_154
+    default y
+
+config LV_FONT_MONTSERRAT_156
+    default y
+
+config LV_FONT_MONTSERRAT_158
+    default y
+
+config LV_FONT_MONTSERRAT_160
+    default y
+
+config LV_FONT_MONTSERRAT_162
+    default y
+
+config LV_FONT_MONTSERRAT_164
+    default y
+
+config LV_FONT_MONTSERRAT_166
+    default y
+
+config LV_FONT_MONTSERRAT_168
+    default y
+
+config LV_FONT_MONTSERRAT_170
+    default y
+
+config LV_FONT_MONTSERRAT_172
+    default y
+
+config LV_FONT_MONTSERRAT_174
+    default y
+
+config LV_FONT_MONTSERRAT_176
+    default y
+
+config LV_FONT_MONTSERRAT_178
+    default y
+
+config LV_FONT_MONTSERRAT_180
+    default y
+
+config LV_FONT_MONTSERRAT_182
+    default y
+
+config LV_FONT_MONTSERRAT_184
+    default y
+
+config LV_FONT_MONTSERRAT_186
+    default y
+
+config LV_FONT_MONTSERRAT_188
+    default y
+
+config LV_FONT_MONTSERRAT_190
+    default y
+
+config LV_FONT_MONTSERRAT_192
+    default y
+
+config LV_FONT_MONTSERRAT_194
+    default y
+
+config LV_FONT_MONTSERRAT_196
+    default y
+
+config LV_FONT_MONTSERRAT_198
+    default y
+
+config LV_FONT_MONTSERRAT_200
+    default y
+
 endif # SHIELD_NICE_OLED || SHIELD_NICE_EPAPER
 
 if NICE_EPAPER_ON
