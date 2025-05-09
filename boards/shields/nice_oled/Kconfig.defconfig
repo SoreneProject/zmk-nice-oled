@@ -108,7 +108,7 @@ endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 endif # SHIELD_NICE_OLED
 endif # NICE_EPAPER_ON
 
-if SHIELD_NICE_OLED || SHIELD_NICE_EPAPER
+if SHIELD_NICE_OLED
 
 config ZMK_DISPLAY
     default y
@@ -395,7 +395,7 @@ config LV_FONT_MONTSERRAT_198
 config LV_FONT_MONTSERRAT_200
     default y
 
-endif # SHIELD_NICE_OLED || SHIELD_NICE_EPAPER
+endif # SHIELD_NICE_OLED
 
 if NICE_EPAPER_ON
 rsource "nice_epaper/Kconfig.defconfig"
